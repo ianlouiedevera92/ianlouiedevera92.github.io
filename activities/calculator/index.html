@@ -6,6 +6,12 @@
 		<link href="../../css/toggle-sidebar.css" rel="stylesheet">
 	</head>
   <body>
+	<body align="center">
+		<style>
+		button, input{
+			width:100%;
+		}
+		</style>
       <script>
           function toNum(n){
               return parseInt(n);
@@ -23,8 +29,8 @@
               return parseInt(n);
           }
           function subtract(n1, n2){
-              sub=toNum(n1) - toNum(n2);
-            output(sub);
+              diff=toNum(n1) - toNum(n2);
+            output(diff);
           }
           function output(res){
               alert(res);
@@ -35,8 +41,8 @@
               return parseInt(n);
           }
           function multiply(n1, n2){
-              multi=toNum(n1) * toNum(n2);
-            output(multi);
+              pro=toNum(n1) * toNum(n2);
+            output(pro);
           }
           function output(res){
               alert(res);
@@ -54,24 +60,45 @@
               alert(res);
           }
       </script>
-      <form name="calc">
-          Num1: <input type="text" id="num1"><br>
-          Num2: <input type="text" id="num2"><br>
-    </form>
-	<div class="container">
-    <div class="row">
+	  <div class="container">
+        <div class="col-md-12">
+          <form name="calc">
+            <div class="row">
+              <div class="col-md-3">
+          Num1:
+		  </div>
+              <div class="col-md-9">
+                <input type="text" id="num1">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+          Num2:
+		   </div>
+              <div class="col-md-9">
+                <input type="text" id="num2">
+              </div>
+            </div>
+          </form>
+	<div class="row">
         <div class="col-md-6">
-    <button onclick="add(document.querySelector('#num1').value, document.querySelector('#num2').value)">Add</button>
-	<button onclick="subtract(document.querySelector('#num1').value, document.querySelector('#num2').value)">Subtract</button>
-		</div>
-	<div class="container">
-    <div class="row">
+            <button class="btn primary" onclick="add(document.querySelector('#num1').value, document.querySelector('#num2').value)">Add</button>
+        </div>
         <div class="col-md-6">
-	<button onclick="multiply(document.querySelector('#num1').value, document.querySelector('#num2').value)">Multiply</button>
-	<button onclick="divide(document.querySelector('#num1').value, document.querySelector('#num2').value)">Divide</button>
-			</div>
-		</div>
-	</div>
+            <button class="btn primary" onclick="subtract(document.querySelector('#num1').value, document.querySelector('#num2').value)">Subtract</button>
+        </div>
+    </div>
+	<br>
+	<div class="row">
+              <div class="col-md-6">
+                <button class="btn primary" onclick="multiply(document.querySelector('#num1').value, document.querySelector('#num2').value)">Multiply</button>
+              </div>
+              <div class="col-md-6">
+                <button class="btn primary" onclick="divide(document.querySelector('#num1').value, document.querySelector('#num2').value)">Divide</button>
+              </div>
+          </div>
+        </div>
+    </div>
 	<!-- jQuery -->
 	<script src="../../js/jquery.js"></script>
 	<!-- Bootstrap Core JavaScript -->
